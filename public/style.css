@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&display=swap');
+
+body {
+    background-color: #000000;
+}
+
+.banner {
+    background-color: #3498db;
+    /* Cor de fundo do banner */
+    color: #fff;
+    /* Cor do texto */
+    padding: 20px;
+    /* Espaçamento interno do banner */
+    text-align: left;
+    /* Alinhamento do texto */
+    font-size: 24px;
+    /* Tamanho do texto */
+    border-radius: 25px;
+}
+
+.fa-icon {
+    display: inline-block;
+    /* Exibe os ícones em linha */
+    font-size: 24px;
+    /* Tamanho do ícone */
+    margin-right: 10px;
+    /* Espaçamento entre os ícones */
+}
+
+.button-container {
+    display: flex; /* Ativa o flexbox para os itens */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-top: 20px; /* Espaçamento entre o banner e o botão */
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+
+    16% {
+        color: orange;
+    }
+
+    33% {
+        color: yellow;
+    }
+
+    50% {
+        color: green;
+    }
+
+    67% {
+        color: blue;
+    }
+
+    84% {
+        color: indigo;
+    }
+
+    100% {
+        color: violet;
+    }
+}
+
+.button-title {
+    font-size: 180px; /* Tamanho da fonte do título */
+    font-family: "Jersey 15 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Espaçamento entre o título e o botão */
+    color: #333; /* Cor do texto do título */
+    animation: rainbow 5s infinite;
+}
+
+button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left, hsl(340deg 100% 16%) 0%, hsl(340deg 100% 32%) 8%, hsl(340deg 100% 32%) 92%, hsl(340deg 100% 16%) 100%);
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+#typing-effect {
+    font-size: 24px;
+    font-family: "Arial", sans-serif;
+    color: #2AD9F4;
+    margin-top: 50px;
+}
+
+/* Seus estilos CSS existentes aqui */
+.schedule {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.schedule h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(128, 0, 128);
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule th, .schedule td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.schedule th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.schedule tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Regras de mídia query para telas menores */
+@media screen and (max-width: 600px) {
+    .button-title {
+        font-size: 50px;
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .schedule {
+        margin-top: 10px;
+        overflow-x: auto;
+    }
+
+    .schedule th, .schedule td {
+        padding: 8px;
+    }
+
+    .schedule h2 {
+        font-size: 20px;
+    }
+}
+
+.info {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .info h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .info p {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .info ul {
+        list-style-type: none;
+    }
+
+        .info ul li {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
